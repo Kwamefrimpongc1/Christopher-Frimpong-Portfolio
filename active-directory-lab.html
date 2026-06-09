@@ -13,68 +13,59 @@
     <h1>Enterprise Active Directory Administration Lab</h1>
 
     <p>
-        This project demonstrates enterprise Active Directory administration
-        using Windows Server 2022 hosted in Microsoft Azure. The goal was to
-        build a realistic corporate environment that simulates how IT teams
-        manage users, groups, organizational units, permissions, and policies
-        at scale.
+        This project demonstrates enterprise Active Directory administration using Windows Server 2022 hosted in Microsoft Azure.
+        The goal was to build a realistic corporate environment that simulates how IT teams manage users, groups,
+        organizational units, permissions, automation, and Group Policy at scale.
     </p>
 
     <h2>Project Objectives</h2>
-
     <ul>
         <li>Deploy Windows Server 2022 in Microsoft Azure</li>
         <li>Install and configure Active Directory Domain Services</li>
         <li>Create a corporate OU structure</li>
         <li>Implement Role-Based Access Control (RBAC)</li>
         <li>Create and manage security groups</li>
-        <li>Automate user provisioning with PowerShell</li>
-        <li>Apply Group Policy Objects (GPOs)</li>
+        <li>Automate user provisioning with PowerShell and CSV imports</li>
+        <li>Configure and link Group Policy Objects (GPOs)</li>
     </ul>
 
     <h2>Environment</h2>
-
     <ul>
         <li>Microsoft Azure</li>
         <li>Windows Server 2022</li>
         <li>Active Directory Domain Services</li>
         <li>Group Policy Management</li>
         <li>PowerShell</li>
+        <li>DNS</li>
     </ul>
 
     <h2>Organizational Unit Design</h2>
 
 <pre>
-Branch_01
+corp.local
 │
-├── Users
-│   ├── HR
-│   ├── IT
-│   └── Finance
+├── Admin
+├── SecurityGroups
+├── Branch_01
+│   ├── Users
+│   │   ├── HR
+│   │   ├── IT
+│   │   └── Finance
+│   ├── Devices
+│   ├── DisabledUsers
+│   └── RetiredDevices
 │
-├── Devices
-├── DisabledUsers
-└── RetiredDevices
-
-Branch_02
-│
-├── Users
-├── Devices
-├── DisabledUsers
-└── RetiredDevices
+└── Branch_02
 </pre>
 
     <p>
-        The OU hierarchy was designed to mirror a real enterprise environment.
-        This structure allows administrative delegation, scalable management,
-        and targeted Group Policy deployment.
+        The OU hierarchy was designed to mirror a real enterprise environment. This structure supports
+        administrative delegation, scalable user management, device organization, and targeted Group Policy deployment.
     </p>
 
     <h2>Role-Based Access Control (RBAC)</h2>
-
     <p>
         Security groups were created to manage permissions using RBAC principles.
-        The following groups were implemented:
     </p>
 
     <ul>
@@ -85,39 +76,51 @@ Branch_02
     </ul>
 
     <h2>PowerShell Automation</h2>
-
     <p>
-        A PowerShell automation script was developed to create Organizational
-        Units, Security Groups, and Active Directory user accounts automatically
-        from a CSV file. This reduced manual administrative effort and simulated
-        enterprise onboarding processes.
+        A PowerShell automation script was developed to create Organizational Units, security groups,
+        and Active Directory user accounts automatically from a CSV file. The script also handled existing users,
+        moved accounts into the correct OUs, and assigned users to the appropriate security groups.
     </p>
 
     <h2>Group Policy Implementation</h2>
-
     <p>
-        A workstation administration Group Policy Object was created and linked
-        to the Branch_01 Devices OU. This demonstrates centralized management
-        of workstation permissions and administrative access through Group Policy.
+        A workstation administration Group Policy Object was created and linked to the Branch_01 Devices OU.
+        This demonstrates centralized management of workstation permissions and administrative access through Group Policy.
     </p>
 
     <h2>Skills Demonstrated</h2>
-
     <ul>
         <li>Active Directory Administration</li>
-        <li>Windows Server 2022</li>
+        <li>Windows Server 2022 Administration</li>
         <li>PowerShell Scripting</li>
+        <li>CSV User Provisioning</li>
         <li>RBAC Implementation</li>
+        <li>Security Group Management</li>
         <li>Group Policy Management</li>
-        <li>User and Group Administration</li>
-        <li>Microsoft Azure</li>
+        <li>Microsoft Azure Infrastructure</li>
+        <li>DNS Administration</li>
     </ul>
 
     <h2>Project Screenshots</h2>
 
-    <p>Add your screenshots below after uploading them to the images folder.</p>
+    <h3>PowerShell Automation</h3>
+    <img src="../images/ad-powershell.jpg" alt="PowerShell automation output showing enterprise AD automation completed successfully" width="100%">
 
-    <a href="../index.html">← Back to Portfolio</a>
+    <h3>Enterprise OU Structure</h3>
+    <img src="../images/ad-ou-structure.jpg" alt="Active Directory OU structure showing Branch_01, Users, HR, IT, Finance, Devices, DisabledUsers, and RetiredDevices" width="100%">
+
+    <h3>Security Groups and RBAC</h3>
+    <img src="../images/ad-security-groups.jpg" alt="Active Directory security groups including IT_Admin, HR_Staff, Finance_Users, and Workstation_Admins" width="100%">
+
+    <h3>Users Organized by Department</h3>
+    <img src="../images/ad-users.jpg" alt="Active Directory users organized inside departmental OUs" width="100%">
+
+    <h3>Group Policy Management</h3>
+    <img src="../images/ad-gpo.jpg" alt="Group Policy Management showing Branch_01 Workstation Admin Policy linked to Devices OU" width="100%">
+
+    <p>
+        <a href="../index.html">← Back to Portfolio</a>
+    </p>
 
 </div>
 
