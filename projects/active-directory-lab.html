@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Active Directory Lab</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<section>
+    <h1>Enterprise Active Directory Administration Lab</h1>
+
+    <p>
+        Built a Windows Server 2022 Active Directory environment in Microsoft Azure.
+        This lab simulated a real enterprise environment with users, groups,
+        organizational units, automation, and Group Policy management.
+    </p>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>Microsoft Azure</li>
+        <li>Windows Server 2022</li>
+        <li>Active Directory Domain Services</li>
+        <li>Group Policy Management</li>
+        <li>PowerShell</li>
+    </ul>
+
+    <h2>What I Built</h2>
+    <ul>
+        <li>Deployed a Windows Server 2022 Domain Controller in Azure</li>
+        <li>Created the corp.local Active Directory domain</li>
+        <li>Designed an enterprise OU structure with Branch_01 and Branch_02</li>
+        <li>Created IT, HR, and Finance departmental OUs</li>
+        <li>Created security groups for RBAC</li>
+        <li>Automated user provisioning with PowerShell and CSV imports</li>
+        <li>Configured and linked Group Policy Objects</li>
+    </ul>
+
+    <h2>OU Structure</h2>
+    <pre>
+corp.local
+├── Admin
+├── SecurityGroups
+├── Branch_01
+│   ├── Users
+│   │   ├── IT
+│   │   ├── HR
+│   │   └── Finance
+│   ├── Devices
+│   ├── DisabledUsers
+│   └── RetiredDevices
+└── Branch_02
+    </pre>
+
+    <h2>Skills Demonstrated</h2>
+    <ul>
+        <li>Active Directory Administration</li>
+        <li>Windows Server Administration</li>
+        <li>PowerShell Automation</li>
+        <li>Role-Based Access Control</li>
+        <li>Group Policy Management</li>
+        <li>User and Group Management</li>
+    </ul>
+
+    <h2>Project Screenshots</h2>
+    <p>Upload screenshots to the images folder and add them here later.</p>
+
+    <p><a href="../index.html">← Back to Portfolio</a></p>
+</section>
+
+</body>
+</html>
