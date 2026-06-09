@@ -1,59 +1,92 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Active Directory Administration Lab</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enterprise Active Directory Administration Lab</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+    line-height:1.7;
+}
+
+h1,h2{
+    color:#38bdf8;
+}
+
+.section{
+    margin-bottom:40px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+img{
+    width:100%;
+    max-width:1000px;
+    border-radius:10px;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+a{
+    color:#38bdf8;
+}
+
+pre{
+    background:#111827;
+    padding:20px;
+    border-radius:10px;
+    overflow:auto;
+}
+</style>
+
 </head>
 <body>
 
-<section class="project-page">
+<h1>Enterprise Active Directory Administration Lab</h1>
 
-    <h1>Enterprise Active Directory Administration Lab</h1>
+<p>
+Built a Windows Server 2022 Active Directory environment in Microsoft Azure.
+This project simulates a real enterprise environment with Organizational Units,
+security groups, RBAC, PowerShell automation, and Group Policy management.
+</p>
 
-    <p>
-        Built a Windows Server 2022 Active Directory environment in Microsoft Azure.
-        This project simulated a real enterprise environment with users, groups,
-        organizational units, PowerShell automation, RBAC, and Group Policy Management.
-    </p>
+<div class="section">
+<h2>Technologies Used</h2>
 
-    <h2>Technologies Used</h2>
+<div class="card">Microsoft Azure</div>
+<div class="card">Windows Server 2022</div>
+<div class="card">Active Directory Domain Services</div>
+<div class="card">Group Policy Management</div>
+<div class="card">PowerShell</div>
+<div class="card">DNS</div>
+</div>
 
-    <div class="card">
-        <p>Microsoft Azure</p>
-    </div>
+<div class="section">
+<h2>What I Built</h2>
 
-    <div class="card">
-        <p>Windows Server 2022</p>
-    </div>
+<div class="card">Deployed a Windows Server 2022 Domain Controller in Azure</div>
+<div class="card">Created the corp.local Active Directory Domain</div>
+<div class="card">Designed a multi-branch OU structure</div>
+<div class="card">Created RBAC Security Groups</div>
+<div class="card">Automated user provisioning with PowerShell and CSV imports</div>
+<div class="card">Configured and linked Group Policy Objects</div>
 
-    <div class="card">
-        <p>Active Directory Domain Services</p>
-    </div>
+</div>
 
-    <div class="card">
-        <p>Group Policy Management</p>
-    </div>
-
-    <div class="card">
-        <p>PowerShell</p>
-    </div>
-
-    <h2>What I Built</h2>
-
-    <ul>
-        <li>Deployed a Windows Server 2022 Domain Controller in Azure</li>
-        <li>Created the corp.local Active Directory domain</li>
-        <li>Designed an enterprise OU structure with Branch_01 and Branch_02</li>
-        <li>Created IT, HR, and Finance departmental OUs</li>
-        <li>Created security groups for RBAC</li>
-        <li>Automated user provisioning using PowerShell and CSV imports</li>
-        <li>Configured and linked Group Policy Objects</li>
-    </ul>
-
-    <h2>OU Structure</h2>
+<div class="section">
+<h2>OU Structure</h2>
 
 <pre>
 corp.local
@@ -72,41 +105,45 @@ corp.local
 └── Branch_02
 </pre>
 
-    <h2>Skills Demonstrated</h2>
+</div>
 
-    <ul>
-        <li>Active Directory Administration</li>
-        <li>Windows Server Administration</li>
-        <li>PowerShell Automation</li>
-        <li>User and Group Management</li>
-        <li>RBAC Implementation</li>
-        <li>Group Policy Management</li>
-        <li>Microsoft Azure Administration</li>
-    </ul>
+<div class="section">
+<h2>Skills Demonstrated</h2>
 
-    <h2>Project Screenshots</h2>
+<div class="card">Active Directory Administration</div>
+<div class="card">Windows Server Administration</div>
+<div class="card">PowerShell Automation</div>
+<div class="card">Group Policy Management</div>
+<div class="card">User and Group Administration</div>
+<div class="card">RBAC Implementation</div>
+<div class="card">Microsoft Azure Infrastructure</div>
 
-    <h3>PowerShell Automation</h3>
-    <img src="images/ad-powershell.jpg" alt="PowerShell Automation" width="100%">
+</div>
 
-    <h3>Enterprise OU Structure</h3>
-    <img src="images/ad-ou-structure.jpg" alt="OU Structure" width="100%">
+<div class="section">
 
-    <h3>Security Groups and RBAC</h3>
-    <img src="images/ad-security-groups.jpg" alt="Security Groups" width="100%">
+<h2>Project Screenshots</h2>
 
-    <h3>Users Organized by Department</h3>
-    <img src="images/ad-users.jpg" alt="Users by Department" width="100%">
+<h3>PowerShell Automation</h3>
+<img src="images/ad-powershell.jpg" alt="PowerShell Automation">
 
-    <h3>Group Policy Management</h3>
-    <img src="images/ad-gpo.jpg" alt="Group Policy Management" width="100%">
+<h3>OU Structure</h3>
+<img src="images/ad-ou-structure.jpg" alt="OU Structure">
 
-    <br><br>
+<h3>Security Groups</h3>
+<img src="images/ad-security-groups.jpg" alt="Security Groups">
 
-    <a href="index.html">← Back to Portfolio</a>
+<h3>Users and Departments</h3>
+<img src="images/ad-users.jpg" alt="Users">
 
-</section>
+<h3>Group Policy Management</h3>
+<img src="images/ad-gpo.jpg" alt="GPO">
+
+</div>
+
+<p>
+<a href="index.html">← Back to Portfolio</a>
+</p>
 
 </body>
 </html>
-```
