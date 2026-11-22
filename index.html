@@ -1,137 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christopher Frimpong | IT & Cybersecurity Portfolio</title>
+    <title>Christopher Frimpong | Data Center, Cloud and Infrastructure</title>
+    <meta name="description" content="Data center IBX engineer at Equinix in Ashburn, VA, working in cloud and infrastructure. U.S. Army veteran. CCNA, Security+, Network+, AWS and Azure certified.">
+    <meta name="theme-color" content="#000000">
+    <script>try{var t=localStorage.getItem('cf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header>
-    <img src="images/profile.jpg" alt="Christopher Frimpong" class="profile-pic">
-    <h1>Christopher Frimpong</h1>
-    <p>Army Veteran | IT Support | Networking | Cloud | Cybersecurity</p>
-</header>
+<nav class="nav" aria-label="Main">
+    <a class="logo" href="#top" aria-label="Christopher Frimpong, home"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M16 2.5 27.7 9.25v13.5L16 29.5 4.3 22.75V9.25Z"/><path d="M16 9.5 21.6 12.75v6.5L16 22.5l-5.6-3.25v-6.5Z" opacity=".55"/><path d="M16 2.5v7M27.7 22.75l-6.1-3.5M4.3 22.75l6.1-3.5" opacity=".55"/></svg></a>
+    <span class="divider"></span>
+    <a class="link keep" href="#top">Home</a>
+    <a class="link" href="#about">About</a>
+    <a class="link keep" href="#projects">Projects</a>
+    <a class="link" href="#certifications">Certifications</a>
+    <a class="link" href="#contact">Contact</a>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></button>
+</nav>
 
-<section class="hero">
-    <h2>Building Real-World IT Skills Through Hands-On Projects</h2>
-    <p>
-        Transitioning from military service into Information Technology with a focus on
-        Networking, Cloud Computing, Cybersecurity, and Systems Administration.
-    </p>
+<main id="main">
 
-    <div class="buttons">
-        <a href="https://github.com/Kwamefrimpongc1" target="_blank">GitHub</a>
-        <a href="#" target="_blank">LinkedIn</a>
-        <a href="resume/Christopher_Frimpong_Resume1.pdf" target="_blank">Download Resume</a>
+<section class="hero" id="top">
+    <canvas id="hex-canvas" aria-hidden="true"></canvas>
+    <div class="wrap">
+        <p class="eyebrow">Data center · Cloud · Infrastructure</p>
+        <h1><span>Christopher</span><span>Frimpong</span></h1>
+        <p class="hero-lede">IBX engineer at Equinix, keeping the infrastructure behind the cloud running.</p>
+        <div class="hero-actions">
+            <a class="btn-glass" href="#projects">View projects</a>
+            <a class="btn-plain" href="#contact">Get in touch ↗</a>
+        </div>
+    </div>
+    <span class="scroll-cue" aria-hidden="true">Scroll to explore</span>
+</section>
+
+<section class="section" id="about">
+    <div class="wrap about-grid">
+        <div class="reveal-text">
+            <p class="eyebrow">About</p>
+            <p>I'm a data center IBX engineer at Equinix in Ashburn, Virginia, with a couple of years of hands-on work in cloud and infrastructure. I hold the CCNA, Security+ and Network+, along with AWS and Azure cloud certifications.</p>
+            <p>Before Equinix I served in the U.S. Army, supporting communications and operational systems for more than fifty soldiers. That's where I learned to troubleshoot under pressure, follow procedure to the letter and keep critical systems up.</p>
+            <p>Outside of work I build labs and tools to go deeper: Active Directory in Azure, PowerShell automation, a Python server monitor with live alerts and a browser-based file compressor. I document each one so you can see exactly how it works.</p>
+        </div>
+        <figure class="portrait-card">
+            <img src="images/profile.jpg" alt="Christopher Frimpong" width="800" height="800">
+            <figcaption><strong><span class="status-dot"></span>IBX Engineer at Equinix</strong>Ashburn, Virginia. Data center, cloud and infrastructure.</figcaption>
+        </figure>
     </div>
 </section>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I am a U.S. Army veteran transitioning into Information Technology.
-        My interests include networking, cloud administration, cybersecurity,
-        and infrastructure management. This portfolio documents the labs and
-        projects I build to develop practical technical skills.
-    </p>
-</section>
+<section class="section" id="projects">
+    <div class="wrap">
+        <p class="eyebrow">Projects</p>
+        <h2 class="section-title">What I built myself</h2>
 
-<section>
-    <h2>Certifications</h2>
+        <div class="proj-grid">
+            <a class="proj wide" href="projects/active-directory-lab.html">
+                <img src="images/ad-ou-structure.jpg" alt="Active Directory Users and Computers showing the corp.local OU tree" loading="lazy">
+                <span class="pill">Windows Server · AD DS · GPO</span>
+                <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+                <span class="cap"><strong>Enterprise Active Directory</strong><span>A multi-branch Windows Server 2022 domain in Azure</span></span>
+            </a>
+            <a class="proj" href="projects/server-monitor.html">
+                <img src="images/server-monitor.jpg" alt="Server Monitor dashboard showing CPU, memory and disk gauges, a usage history chart, server uptime and recent alerts" loading="lazy">
+                <span class="pill">Python · Flask · SQLite</span>
+                <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+                <span class="cap"><strong>Server Monitor</strong><span>Live CPU, memory, disk and uptime with alerts</span></span>
+            </a>
+            <a class="proj" href="projects/file-compressor.html">
+                <img src="images/fc-home.jpg" alt="File Compressor home screen with a drop zone and tabs for compress, convert, sign, merge and QR code" loading="lazy">
+                <span class="pill">Web app · Live on Vercel</span>
+                <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+                <span class="cap"><strong>File Compressor</strong><span>36 file tools that run in the browser</span></span>
+            </a>
+            <a class="proj" href="projects/active-directory-lab.html">
+                <img src="images/ad-powershell.jpg" alt="PowerShell script output creating OUs, groups and users" loading="lazy">
+                <span class="pill">PowerShell</span>
+                <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+                <span class="cap"><strong>AD provisioning script</strong><span>OUs, groups and users from one CSV</span></span>
+            </a>
+            <a class="proj" href="projects/azure-user-automation.html">
+                <div class="mock" aria-hidden="true">
+                    <div class="bar"><i></i><i></i><i></i></div>
+                    <div><span class="p">PS&gt;</span> Connect-MgGraph -Scopes "User.ReadWrite.All"</div>
+                    <div><span class="p">PS&gt;</span> Import-Csv .\new-hires.csv | New-EntraUser</div>
+                    <div class="ok">✓ Created 12 users</div>
+                    <div><span class="p">PS&gt;</span> Add-GroupMember -Group "HR_Staff"</div>
+                    <div class="ok">✓ Group membership updated</div>
+                    <div class="c"># Entra ID tenant: lab</div>
+                </div>
+                <span class="pill">Entra ID · Graph</span>
+                <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+                <span class="cap"><strong>Azure user automation</strong><span>Cloud identity managed with PowerShell</span></span>
+            </a>
+        </div>
 
-    <div class="card">
-        <h3>IBM Cybersecurity Analyst Professional Certificate</h3>
-        <p>Completed</p>
-    </div>
-
-    <div class="card">
-        <h3>CompTIA A+</h3>
-        <p>Completed</p>
-    </div>
-
-    <div class="card">
-        <h3>CompTIA Security+</h3>
-        <p>Completed</p>
-    </div>
-</section>
-
-<section>
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>Azure User Automation Lab</h3>
-        <p>
-            User provisioning and management using Microsoft Azure and Microsoft Entra ID.
-            Automated user creation, group assignment, and administrative workflows using PowerShell.
-        </p>
-        <a href="projects/azure-user-automation.html">View Project</a>
-    </div>
-
-    <div class="card">
-        <h3>Enterprise Active Directory Administration Lab</h3>
-        <p>
-            Designed and deployed a Windows Server 2022 Active Directory environment in Azure.
-            Created Organizational Units, implemented Role-Based Access Control (RBAC),
-            configured Group Policy Objects, and automated user provisioning with PowerShell.
-        </p>
-        <a href="projects/active-directory-lab.html">View Project</a>
-    </div>
-
-    <div class="card">
-        <h3>Wired 802.1X Network Access Control Lab</h3>
-        <p>
-            Cisco Catalyst switches integrated with FreeRADIUS for authentication and
-            network access control.
-        </p>
-        <p><strong>Status:</strong> Coming Soon</p>
-    </div>
-
-    <div class="card">
-        <h3>Help Desk Ticketing Lab</h3>
-        <p>
-            Simulated IT support environment demonstrating ticket creation,
-            troubleshooting, escalation, and resolution.
-        </p>
-        <p><strong>Status:</strong> Coming Soon</p>
-    </div>
-
-    <div class="card">
-        <h3>Network Monitoring Lab</h3>
-        <p>
-            Network troubleshooting and traffic analysis using Wireshark
-            and monitoring tools.
-        </p>
-        <p><strong>Status:</strong> Coming Soon</p>
+        <div class="upcoming">
+            <ul>
+                <li><span class="k">Networking</span><div><h3>Wired 802.1X access control</h3><p>Cisco Catalyst switches authenticating devices against FreeRADIUS.</p></div><span class="chip live">Building</span></li>
+                <li><span class="k">Support</span><div><h3>Help desk ticketing</h3><p>Ticket intake, troubleshooting, escalation and resolution.</p></div><span class="chip">Up next</span></li>
+                <li><span class="k">Networking</span><div><h3>Network monitoring</h3><p>Traffic analysis and troubleshooting with Wireshark.</p></div><span class="chip">Up next</span></li>
+            </ul>
+        </div>
     </div>
 </section>
 
-<section>
-    <h2>Technical Skills</h2>
-    <ul>
-        <li>Active Directory Administration</li>
-        <li>Group Policy Management</li>
-        <li>Windows Server 2022</li>
-        <li>PowerShell Automation</li>
-        <li>Microsoft Azure</li>
-        <li>Microsoft Entra ID</li>
-        <li>Microsoft Graph</li>
-        <li>RBAC & Security Groups</li>
-        <li>User Provisioning</li>
-        <li>DNS Administration</li>
-        <li>Cisco Switching & Routing</li>
-        <li>TCP/IP Networking</li>
-        <li>Network Troubleshooting</li>
-        <li>Wireshark</li>
-        <li>Git & GitHub</li>
-        <li>Cybersecurity Fundamentals</li>
-    </ul>
+<section class="section" id="certifications">
+    <div class="wrap">
+        <p class="eyebrow">Certifications</p>
+        <h2 class="section-title">Verified skills</h2>
+        <div class="cert-grid">
+            <div class="cert" style="--c:#1ba0d7;--glow:rgba(27,160,215,.35)"><div class="mark">CCNA</div><p class="issuer">Cisco</p><h3>CCNA</h3></div>
+            <div class="cert" style="--c:#d6203d;--glow:rgba(214,32,61,.32)"><div class="mark">Sec+</div><p class="issuer">CompTIA</p><h3>Security+</h3></div>
+            <div class="cert" style="--c:#c0254a;--glow:rgba(192,37,74,.28)"><div class="mark">Net+</div><p class="issuer">CompTIA</p><h3>Network+</h3></div>
+            <div class="cert" style="--c:#e68a00;--glow:rgba(255,153,0,.32)"><div class="mark">AWS</div><p class="issuer">Amazon Web Services</p><h3>AWS Certified Cloud Practitioner</h3></div>
+            <div class="cert" style="--c:#0a78d4;--glow:rgba(10,120,212,.35)"><div class="mark">AZ-900</div><p class="issuer">Microsoft</p><h3>Azure Fundamentals</h3></div>
+        </div>
+    </div>
 </section>
 
-<footer>
-    <p>© 2026 Christopher Frimpong | IT & Cybersecurity Portfolio</p>
-</footer>
+<section class="section" id="experience">
+    <div class="wrap">
+        <p class="eyebrow">Experience</p>
+        <h2 class="section-title">Career and education</h2>
+        <div class="exp">
+            <div class="exp-item">
+                <div><p class="when">Present</p><p class="where">Equinix<br>Ashburn, VA</p></div>
+                <div>
+                    <h3>Data Center IBX Engineer</h3>
+                    <ul>
+                        <li>Work on site in an Equinix IBX data center in Ashburn, one of the largest data center hubs in the world, supporting the infrastructure that cloud providers and enterprises run on.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exp-item">
+                <div><p class="when">From Jun 2023</p><p class="where">U.S. Army<br>Fort Campbell, KY</p></div>
+                <div>
+                    <h3>Cannon Crew Member</h3>
+                    <ul>
+                        <li>Supported mission-critical communications and operational systems for more than 50 personnel in training and field environments.</li>
+                        <li>Diagnosed and resolved hardware and software issues, and helped soldiers with setup, login and equipment problems.</li>
+                        <li>Kept sensitive equipment accounted for with zero loss incidents, following strict security procedures.</li>
+                        <li>Led and mentored junior soldiers during training and daily operations.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exp-item">
+                <div><p class="when">Nov 2022 · May 2023</p><p class="where">Ken's Foods<br>Marlborough, MA</p></div>
+                <div>
+                    <h3>Material Handler</h3>
+                    <ul>
+                        <li>Ran warehouse management and inventory tracking systems and kept digital records accurate.</li>
+                        <li>Used scanning and tracking systems to improve inventory accountability and workflow.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exp-item">
+                <div><p class="when">Sep 2019 · Nov 2021</p><p class="where">MTN Ghana<br>Accra</p></div>
+                <div>
+                    <h3>Customer Service Representative</h3>
+                    <ul>
+                        <li>Resolved mobile service, billing, SIM activation and data configuration issues for customers.</li>
+                        <li>Documented every interaction and escalated unresolved technical issues to higher-tier support.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="edu-row">
+                <div><p class="when">In progress</p></div>
+                <div>
+                    <h3>B.S. Information Technology</h3>
+                    <p>American Public University System · 60 of 120 credits completed</p>
+                    <div class="bar-track" role="img" aria-label="About halfway complete"><i></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="section" id="skills">
+    <div class="wrap">
+        <p class="eyebrow">Skills</p>
+        <h2 class="section-title">What I work with</h2>
+        <div class="skills">
+            <div><h3>Networking</h3><ul><li>Cisco switching and routing</li><li>TCP/IP and subnetting</li><li>VLANs and 802.1X</li><li>DNS</li><li>Wireshark</li></ul></div>
+            <div><h3>Identity and systems</h3><ul><li>Active Directory</li><li>Group Policy</li><li>Windows Server 2022</li><li>Microsoft Entra ID</li><li>PowerShell</li></ul></div>
+            <div><h3>Cloud</h3><ul><li>Microsoft Azure</li><li>Amazon Web Services</li><li>Microsoft Graph</li><li>Microsoft 365</li></ul></div>
+            <div><h3>Support</h3><ul><li>Help desk ticketing</li><li>ServiceNow</li><li>Windows 10 and 11</li><li>Hardware and software installs</li><li>Asset management</li></ul></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">Let's talk</h2>
+        <div class="contact-list">
+            <a href="mailto:christopher.frimpong1@outlook.com"><span>Email</span><b>christopher.frimpong1@outlook.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+            <a href="https://www.linkedin.com/in/Christopher.frimpong1" target="_blank" rel="noopener"><span>LinkedIn</span><b>Christopher.frimpong1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+            <a href="https://github.com/Kwamefrimpongc1" target="_blank" rel="noopener"><span>GitHub</span><b>Kwamefrimpongc1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+            <a href="resume/Christopher_Frimpong_Resume1.pdf" download><span>Resume</span><b>Download PDF <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+        </div>
+        <footer class="footer"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M16 2.5 27.7 9.25v13.5L16 29.5 4.3 22.75V9.25Z"/><path d="M16 9.5 21.6 12.75v6.5L16 22.5l-5.6-3.25v-6.5Z" opacity=".55"/><path d="M16 2.5v7M27.7 22.75l-6.1-3.5M4.3 22.75l6.1-3.5" opacity=".55"/></svg><span>© 2026 Christopher Frimpong</span></footer>
+    </div>
+</section>
+
+</main>
+
+<script src="vendor/three.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

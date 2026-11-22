@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Monitor | Christopher Frimpong</title>
+    <meta name="theme-color" content="#000000">
+    <script>try{var t=localStorage.getItem('cf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main">
+    <a class="logo" href="../index.html#top" aria-label="Christopher Frimpong, home"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M16 2.5 27.7 9.25v13.5L16 29.5 4.3 22.75V9.25Z"/><path d="M16 9.5 21.6 12.75v6.5L16 22.5l-5.6-3.25v-6.5Z" opacity=".55"/><path d="M16 2.5v7M27.7 22.75l-6.1-3.5M4.3 22.75l6.1-3.5" opacity=".55"/></svg></a>
+    <span class="divider"></span>
+    <a class="link keep" href="../index.html#top">Home</a>
+    <a class="link" href="../index.html#about">About</a>
+    <a class="link keep" href="../index.html#projects">Projects</a>
+    <a class="link" href="../index.html#certifications">Certifications</a>
+    <a class="link" href="../index.html#contact">Contact</a>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></button>
+</nav>
+<main id="main">
+<header class="page-hero">
+    <div class="wrap">
+        <a class="back" href="../index.html#projects">← Back to projects</a>
+        <p class="eyebrow">Project</p>
+        <h1>Server Monitor</h1>
+        <p class="lede">A Python tool that watches CPU, memory, disk and server availability, sends alerts when something crosses a limit or goes down, keeps a history database and shows it all on a live dashboard.</p>
+        <div class="hero-actions" style="margin-top:32px">
+            <a class="btn-glass" href="https://github.com/Kwamefrimpongc1/Server-Monitor" target="_blank" rel="noopener">View the code on GitHub ↗</a>
+        </div>
+    </div>
+</header>
+<div class="wrap doc">
+    <article>
+        <div class="shots" style="margin-bottom:8px">
+            <figure><img src="../images/server-monitor.jpg" alt="Server Monitor dashboard with CPU, memory and disk usage, usage history chart, server uptime and recent alerts"><figcaption><strong>Live dashboard</strong>Current usage against alert limits, an hour of history, uptime for each server and the latest alerts.</figcaption></figure>
+        </div>
+
+        <h2>What it does</h2>
+        <ol>
+            <li>Reads CPU, memory and disk usage with psutil on a set interval.</li>
+            <li>Checks that servers are reachable by ping, TCP port (SSH, databases) or HTTP request (websites and APIs).</li>
+            <li>Raises an alert when a value crosses its limit or a server goes down, and sends a resolved message when it recovers.</li>
+            <li>Delivers alerts to the console, a log file, email over SMTP, and Slack or Discord webhooks, with a cooldown so the same alert isn't repeated.</li>
+            <li>Saves every reading, status check and alert to a SQLite database, and cleans up old data automatically.</li>
+        </ol>
+
+        <h2>The dashboard</h2>
+        <p>A Flask web server exposes the data through a small API, and the dashboard polls it every 5 seconds. It shows current usage with alert limits, a history chart from 15 minutes to 7 days with hover details, uptime for each server and recent alerts. The chart is hand-drawn SVG with no chart library, and the page supports light and dark mode.</p>
+
+        <h2>How it runs</h2>
+<pre class="code"><b>python dashboard.py</b>        # monitor + web dashboard on port 5050
+<b>python monitor.py</b>          # monitor only, no web page
+<b>python monitor.py --once</b>   # one round of checks, for testing or cron</pre>
+        <p>Thresholds, the servers to check and alert channels all live in one config.yaml file, with real passwords kept in a git-ignored local copy. On Linux it runs as a systemd service that starts on boot and restarts itself if it stops.</p>
+    </article>
+    <aside>
+        <h3>Built with</h3>
+        <ul><li>Python</li><li>psutil</li><li>Flask</li><li>SQLite</li><li>PyYAML</li><li>HTML, CSS and JavaScript</li></ul>
+        <h3>Skills shown</h3>
+        <ul><li>System monitoring</li><li>Alerting and incident response</li><li>Network availability checks</li><li>Linux services with systemd</li><li>Python scripting</li><li>Secure configuration</li></ul>
+        <h3>Code</h3>
+        <ul><li><a href="https://github.com/Kwamefrimpongc1/Server-Monitor" target="_blank" rel="noopener">Kwamefrimpongc1/Server-Monitor</a></li></ul>
+    </aside>
+</div>
+<section class="section" id="contact">
+    <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">Let's talk</h2>
+        <div class="contact-list">
+            <a href="mailto:christopher.frimpong1@outlook.com"><span>Email</span><b>christopher.frimpong1@outlook.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+            <a href="https://www.linkedin.com/in/Christopher.frimpong1" target="_blank" rel="noopener"><span>LinkedIn</span><b>Christopher.frimpong1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+            <a href="https://github.com/Kwamefrimpongc1" target="_blank" rel="noopener"><span>GitHub</span><b>Kwamefrimpongc1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+            <a href="../resume/Christopher_Frimpong_Resume1.pdf" download><span>Resume</span><b>Download PDF <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+        </div>
+        <footer class="footer"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M16 2.5 27.7 9.25v13.5L16 29.5 4.3 22.75V9.25Z"/><path d="M16 9.5 21.6 12.75v6.5L16 22.5l-5.6-3.25v-6.5Z" opacity=".55"/><path d="M16 2.5v7M27.7 22.75l-6.1-3.5M4.3 22.75l6.1-3.5" opacity=".55"/></svg><span>© 2026 Christopher Frimpong</span></footer>
+    </div>
+</section>
+</main>
+<script src="../main.js"></script>
+</body>
+</html>
