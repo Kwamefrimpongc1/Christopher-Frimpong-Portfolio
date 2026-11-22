@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeskSim ITSM | Christopher Frimpong</title>
+    <meta name="description" content="DeskSim ITSM: a service desk training simulator and shared help desk ticketing app, built with JavaScript and Supabase.">
+    <meta name="theme-color" content="#000000">
+    <script>try{var t=localStorage.getItem('cf-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main">
+    <a class="logo" href="../index.html#top" aria-label="Christopher Frimpong, home"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M16 2.5 27.7 9.25v13.5L16 29.5 4.3 22.75V9.25Z"/><path d="M16 9.5 21.6 12.75v6.5L16 22.5l-5.6-3.25v-6.5Z" opacity=".55"/><path d="M16 2.5v7M27.7 22.75l-6.1-3.5M4.3 22.75l6.1-3.5" opacity=".55"/></svg></a>
+    <span class="divider"></span>
+    <a class="link keep" href="../index.html#top">Home</a>
+    <a class="link" href="../index.html#about">About</a>
+    <a class="link keep" href="../index.html#projects">Projects</a>
+    <a class="link" href="../index.html#certifications">Certifications</a>
+    <a class="link" href="../index.html#contact">Contact</a>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></button>
+</nav>
+<main id="main">
+<header class="page-hero">
+    <div class="wrap">
+        <a class="back" href="../index.html#projects">← Back to projects</a>
+        <p class="eyebrow">Project</p>
+        <h1>DeskSim ITSM</h1>
+        <p class="lede">A help desk ticketing app and service desk training simulator. Agents work a full 09:00–17:00 shift of phone calls, tickets and requests, and get scored on priority, SLAs, security and customer satisfaction. Real tickets are shared live through a Supabase database.</p>
+        <div class="hero-actions" style="margin-top:32px">
+            <a class="btn-glass" href="https://desksim-itsm.vercel.app" target="_blank" rel="noopener">Open the live app ↗</a>
+            <a class="btn-glass" href="https://github.com/Kwamefrimpongc1/desksim-itsm" target="_blank" rel="noopener">View the code on GitHub ↗</a>
+        </div>
+    </div>
+</header>
+<div class="wrap doc">
+    <article>
+        <div class="shots" style="margin-bottom:8px">
+            <figure><img src="../images/desksim-priority.jpg" alt="DeskSim priority list with count cards for Priority List, Incidents, SLA Breached and Requests, filter chips and a ticket table showing priority, status and time remaining"><figcaption><strong>Priority list</strong>Everything that needs attention now: new tickets, critical and high priority, customer updates and anything close to breaching its SLA.</figcaption></figure>
+        </div>
+
+        <h2>What it does</h2>
+        <p>DeskSim has three modes that share one ticketing system.</p>
+        <ol>
+            <li><b>Training simulator.</b> A timed shift where incidents arrive by email, portal and phone. Calls ring with sound and go to voicemail after a minute. Each ticket has to be triaged, worked and documented like it would be on a real service desk.</li>
+            <li><b>Live service desk.</b> Real incidents and requests stored in Supabase, with comments, internal work notes, field-change history, assignment groups and SLA timers. Every signed-in agent sees updates in real time.</li>
+            <li><b>Employee portal.</b> Staff report an issue or request something and follow their own tickets. They only see customer-visible comments, never internal notes.</li>
+        </ol>
+
+        <h2>What a shift tests</h2>
+        <ol>
+            <li><b>Triage.</b> Category, impact and urgency set the priority (1 – Critical to 4 – Low), which sets the response and resolution SLAs.</li>
+            <li><b>Identity verification.</b> Callers are checked against a staff directory before any account change. Two scenarios are social-engineering calls (a fake executive assistant and a fake MFA reset) that must be refused and sent to Security.</li>
+            <li><b>Real fixes in admin tools.</b> An account console (unlock, password reset, MFA reset, sign-in logs), remote support (disk, Outlook, Office add-ins, Teams audio, printers, VPN) and a software catalog. A ticket only stays closed if the underlying problem was actually fixed.</li>
+            <li><b>Routing and escalation.</b> Network outages, malware, dead hardware and business-app failures go to the right resolver group, with a major-incident flow when many users report the same outage.</li>
+            <li><b>Requests.</b> Catalog items with approval, fulfilment and notification steps, including an access request that must not be granted before approval.</li>
+            <li><b>Documentation and customer care.</b> Resolution notes are scored on cause, action and user confirmation. Caller mood drops with slow replies or dismissive wording and drives the CSAT score.</li>
+            <li><b>The shift itself.</b> Team-lead tasks, required breaks and a written handover of open critical tickets before the shift can end.</li>
+        </ol>
+
+        <h2>Screenshots</h2>
+        <div class="shots">
+            <figure><img src="../images/desksim-incident.jpg" alt="Incident detail page with key facts, tabs and a notes thread mixing customer messages, internal notes and system changes" loading="lazy"><figcaption><strong>Incident record</strong>Key facts, caller mood and SLA at the top. Notes filter by customer, internal and system entries.</figcaption></figure>
+            <figure><img src="../images/desksim-remote.jpg" alt="Remote Support tab showing disk usage, Outlook connection, Office add-ins, audio, printing and network panels for the caller's laptop" loading="lazy"><figcaption><strong>Remote support</strong>Inspect and fix the caller's device: disable a bad add-in, free disk space, switch audio devices.</figcaption></figure>
+            <figure><img src="../images/desksim-call.jpg" alt="Call Centre screen with a live call transcript, identity verification showing a failed callback, and the call logging form" loading="lazy"><figcaption><strong>Phone call</strong>A social-engineering call caught by calling back the number on the HR record.</figcaption></figure>
+        </div>
+
+        <h2>How it's built</h2>
+        <p>The front end is plain HTML, CSS and JavaScript with no build step, deployed on Vercel. Supabase provides sign-in, the Postgres database and real-time updates. Row Level Security policies decide what each role can see and change: employees can only read their own tickets and never internal notes, and nobody can post a fake score to the leaderboard. Ticket numbers (INC0010001, RITM0010001), first-response times and resolution times are set by database triggers.</p>
+<pre class="code"><b>supabase/schema.sql</b>   # tables, triggers, RLS policies, realtime
+<b>js/sim.js</b>             # training engine: calls, scoring, SLAs, mood
+<b>js/store.js</b>           # Supabase or browser storage behind one API
+<b>js/live.js</b>            # shared live desk and employee portal</pre>
+    </article>
+    <aside>
+        <h3>Live at</h3>
+        <ul><li><a href="https://desksim-itsm.vercel.app" target="_blank" rel="noopener">desksim-itsm.vercel.app</a></li></ul>
+        <h3>Built with</h3>
+        <ul><li>JavaScript, HTML and CSS</li><li>Supabase (Postgres, Auth, Realtime)</li><li>Row Level Security</li><li>Vercel</li><li>Web Audio API</li></ul>
+        <h3>Skills shown</h3>
+        <ul><li>ITIL incident and request management</li><li>SLA and priority management</li><li>Identity verification and social engineering awareness</li><li>Account, endpoint and software support</li><li>Escalation and major incidents</li><li>Database security design</li></ul>
+        <h3>Code</h3>
+        <ul><li><a href="https://github.com/Kwamefrimpongc1/desksim-itsm" target="_blank" rel="noopener">Kwamefrimpongc1/desksim-itsm</a></li></ul>
+    </aside>
+</div>
+<section class="section" id="contact">
+    <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">Let's talk</h2>
+        <div class="contact-list">
+            <a href="mailto:christopher.frimpong1@outlook.com"><span>Email</span><b>christopher.frimpong1@outlook.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+            <a href="https://www.linkedin.com/in/Christopher.frimpong1" target="_blank" rel="noopener"><span>LinkedIn</span><b>Christopher.frimpong1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+            <a href="https://github.com/Kwamefrimpongc1" target="_blank" rel="noopener"><span>GitHub</span><b>Kwamefrimpongc1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+            <a href="../resume/Christopher_Frimpong_Resume1.pdf" download><span>Resume</span><b>Download PDF <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></b></a>
+        </div>
+        <footer class="footer"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M16 2.5 27.7 9.25v13.5L16 29.5 4.3 22.75V9.25Z"/><path d="M16 9.5 21.6 12.75v6.5L16 22.5l-5.6-3.25v-6.5Z" opacity=".55"/><path d="M16 2.5v7M27.7 22.75l-6.1-3.5M4.3 22.75l6.1-3.5" opacity=".55"/></svg><span>© 2026 Christopher Frimpong</span></footer>
+    </div>
+</section>
+</main>
+<script src="../main.js"></script>
+</body>
+</html>
